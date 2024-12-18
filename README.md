@@ -1,134 +1,163 @@
-# Auto Deep Learning (AutoDL) Projects
+<p align="center">
+<img src="https://xuanyidong.com/resources/images/AutoDL-log.png" width="400"/>
+</p>
 
-**Auto Deep Learning (AutoDL)** is an open-source, lightweight but powerful framework for automating deep learning tasks like neural architecture search (NAS) and hyperparameter optimization (HPO). This project aims to provide a simple yet effective library that allows researchers, engineers, and beginners to easily test and use various state-of-the-art NAS and HPO algorithms.
+---------
+[![MIT licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md)
 
-## Table of Contents
+Automated Deep Learning Projects (AutoDL-Projects) is an open source, lightweight, but useful project for everyone.
+This project implemented several neural architecture search (NAS) and hyper-parameter optimization (HPO) algorithms.
+中文介绍见[README_CN.md](https://github.com/D-X-Y/AutoDL-Projects/tree/main/docs/README_CN.md)
 
-- [Introduction](#introduction)
-- [Who Should Use AutoDL](#who-should-use-autodl)
-- [Why Use AutoDL](#why-use-autodl)
-- [AutoDL Capabilities](#autodl-capabilities)
-- [Installation](#installation)
-- [Training and Usage](#training-and-usage)
-- [Citation](#citation)
-- [License](#license)
-- [Contribution](#contribution)
-- [Additional Notes](#additional-notes)
+**Who should consider using AutoDL-Projects**
 
-## Introduction
+- Beginners who want to **try different AutoDL algorithms**
+- Engineers who want to **try AutoDL** to investigate whether AutoDL works on your projects
+- Researchers who want to **easily** implement and experiement **new** AutoDL algorithms.
 
-AutoDL Projects implements various cutting-edge Neural Architecture Search (NAS) and Hyperparameter Optimization (HPO) algorithms to make the deployment of deep learning models easier and more efficient. These algorithms help automate model architecture design and hyperparameter tuning, significantly improving the accuracy and efficiency of machine learning models.
+**Why should we use AutoDL-Projects**
+- Simple library dependencies
+- All algorithms are in the same codebase
+- Active maintenance
 
-This repository contains popular algorithms, including:
+## AutoDL-Projects Capabilities
 
-- **DARTS**: Differentiable Architecture Search
-- **GDAS**: Robust Neural Architecture Search
-- **TAS**: Transformable Architecture Search
-- **SETN**: Self-Evaluated Template Network
-- **NAS-Bench-201**: Benchmark for NAS
-- **NATS-Bench**: Benchmarking NAS Algorithms
+At this moment, this project provides the following algorithms and scripts to run them. Please see the details in the link provided in the description column.
 
-Additionally, there is support for basic models like **ResNet** for image classification and hyperparameter optimization via methods like **HPO-CG**.
-
-## Who Should Use AutoDL
-
-- **Beginners**: New to deep learning and want to try different NAS and HPO algorithms without dealing with complex details.
-- **Engineers**: Professionals aiming to automate the process of model selection and hyperparameter tuning for real-world applications.
-- **Researchers**: Academics looking for a simple yet flexible framework to test and benchmark new NAS and HPO algorithms.
-
-## Why Use AutoDL
-
-- **User-Friendly**: Simplifies the process of model building by automating architecture selection and hyperparameter optimization.
-- **Open Source**: Free and open for modification and redistribution under the MIT license.
-- **Active Maintenance**: Constant updates and new algorithms are added to the codebase.
-- **Efficient**: Automates repetitive tasks like hyperparameter tuning and architecture search, saving time and resources.
-
-## AutoDL Capabilities
-
-This project offers a variety of algorithms and scripts for Neural Architecture Search (NAS) and Hyperparameter Optimization (HPO):
-
-### NAS Algorithms
-
-| Type | ABBRV | Algorithm | Description |
-|------|-------|-----------|-------------|
-| **NAS** | TAS | Network Pruning via Transformable Architecture Search | Prunes architectures through NAS (NeurIPS-2019). |
-| **NAS** | DARTS | Differentiable Architecture Search | Differentiable NAS for efficient architecture search (ICLR-2019). |
-| **NAS** | GDAS | Robust Neural Architecture Search | Optimized for robustness and computational efficiency (CVPR-2019). |
-| **NAS** | SETN | One-Shot Neural Architecture Search via Self-Evaluated Template Network | Self-evaluated template network for one-shot NAS (ICCV-2019). |
-| **NAS** | NAS-Bench-201 | NAS-Bench-201: Extending the Scope of Reproducible NAS | A benchmark for reproducible NAS experiments. |
-| **NAS** | NATS-Bench | Benchmarking NAS Algorithms for Architecture Topology and Size | Comprehensive benchmark for NAS algorithms. |
-| **NAS** | ENAS/REA/REINFORCE | Various additional algorithms | Check relevant papers for more details. |
-
-### HPO Algorithms
-
-| Type | ABBRV | Algorithm | Description |
-|------|-------|-----------|-------------|
-| **HPO** | HPO-CG | Hyperparameter Optimization with Approximate Gradient | Hyperparameter tuning with gradient approximation (coming soon). |
-
-### Basic Models
-
-| Type | Model | Description |
-|------|-------|-------------|
-| **Basic** | ResNet | Deep learning-based image classification using ResNet. |
-
-## Installation
-
-### Prerequisites
-- **Python**: 3.6 or higher
-- **PyTorch**: 1.5.0 or higher
-- **Dependencies**: `numpy`, `scikit-learn`, `opencv`, `matplotlib`
-
-### Steps for Installation:
-
-1. Clone the repository with submodules:
-   ```bash
-   git clone --recurse-submodules https://github.com/yourusername/AutoDL-Projects.git
-   cd AutoDL-Projects
-   pip install -r requirements.txt
-###Training and Usage
-##Training a Model:
-To train a model using your dataset, use the following command:
+<table>
+ <tbody>
+    <tr align="center" valign="bottom">
+      <th>Type</th>
+      <th>ABBRV</th>
+      <th>Algorithms</th>
+      <th>Description</th>
+    </tr>
+    <tr> <!-- (1-st row) -->
+    <td rowspan="6" align="center" valign="middle" halign="middle"> NAS </td>
+    <td align="center" valign="middle"> TAS </td>
+    <td align="center" valign="middle"> <a href="https://arxiv.org/abs/1905.09717">Network Pruning via Transformable Architecture Search</a> </td>
+    <td align="center" valign="middle"> <a href="https://github.com/D-X-Y/AutoDL-Projects/tree/main/docs/NeurIPS-2019-TAS.md">NeurIPS-2019-TAS.md</a> </td>
+    </tr>
+    <tr> <!-- (2-nd row) -->
+    <td align="center" valign="middle"> DARTS </td>
+    <td align="center" valign="middle"> <a href="https://arxiv.org/abs/1806.09055">DARTS: Differentiable Architecture Search</a> </td>
+    <td align="center" valign="middle"> <a href="https://github.com/D-X-Y/AutoDL-Projects/tree/main/docs/ICLR-2019-DARTS.md">ICLR-2019-DARTS.md</a> </td>
+    </tr>
+    <tr> <!-- (3-nd row) -->
+    <td align="center" valign="middle"> GDAS </td>
+    <td align="center" valign="middle"> <a href="https://arxiv.org/abs/1910.04465">Searching for A Robust Neural Architecture in Four GPU Hours</a> </td>
+    <td align="center" valign="middle"> <a href="https://github.com/D-X-Y/AutoDL-Projects/tree/main/docs/CVPR-2019-GDAS.md">CVPR-2019-GDAS.md</a> </td>
+    </tr>
+    <tr> <!-- (4-rd row) -->
+    <td align="center" valign="middle"> SETN </td>
+    <td align="center" valign="middle"> <a href="https://arxiv.org/abs/1910.05733">One-Shot Neural Architecture Search via Self-Evaluated Template Network</a> </td>
+    <td align="center" valign="middle"> <a href="https://github.com/D-X-Y/AutoDL-Projects/tree/main/docs/ICCV-2019-SETN.md">ICCV-2019-SETN.md</a> </td>
+    </tr>
+    <tr> <!-- (5-th row) -->
+    <td align="center" valign="middle"> NAS-Bench-201 </td>
+    <td align="center" valign="middle"> <a href="https://openreview.net/forum?id=HJxyZkBKDr"> NAS-Bench-201: Extending the Scope of Reproducible Neural Architecture Search</a> </td>
+    <td align="center" valign="middle"> <a href="https://github.com/D-X-Y/AutoDL-Projects/tree/main/docs/NAS-Bench-201.md">NAS-Bench-201.md</a> </td>
+    </tr>
+    <tr> <!-- (6-th row) -->
+    <td align="center" valign="middle"> NATS-Bench </td>
+    <td align="center" valign="middle"> <a href="https://xuanyidong.com/assets/projects/NATS-Bench"> NATS-Bench: Benchmarking NAS Algorithms for Architecture Topology and Size</a> </td>
+    <td align="center" valign="middle"> <a href="https://github.com/D-X-Y/NATS-Bench/blob/main/README.md">NATS-Bench.md</a> </td>
+    </tr>
+    <tr> <!-- (7-th row) -->
+    <td align="center" valign="middle"> ... </td>
+    <td align="center" valign="middle"> ENAS / REA / REINFORCE / BOHB </td>
+    <td align="center" valign="middle"> Please check the original papers </td>
+    <td align="center" valign="middle"> <a href="https://github.com/D-X-Y/AutoDL-Projects/tree/main/docs/NAS-Bench-201.md">NAS-Bench-201.md</a>  <a href="https://github.com/D-X-Y/NATS-Bench/blob/main/README.md">NATS-Bench.md</a> </td>
+    </tr>
+    <tr> <!-- (start second block) -->
+    <td rowspan="1" align="center" valign="middle" halign="middle"> HPO </td>
+    <td align="center" valign="middle"> HPO-CG </td>
+    <td align="center" valign="middle"> Hyperparameter optimization with approximate gradient </td>
+    <td align="center" valign="middle"> coming soon </a> </td>
+    </tr>
+    <tr> <!-- (start third block) -->
+    <td rowspan="1" align="center" valign="middle" halign="middle"> Basic </td>
+    <td align="center" valign="middle"> ResNet </td>
+    <td align="center" valign="middle"> Deep Learning-based Image Classification </td>
+    <td align="center" valign="middle"> <a href="https://github.com/D-X-Y/AutoDL-Projects/tree/main/docs/BASELINE.md">BASELINE.md</a> </a> </td>
+    </tr>
+ </tbody>
+</table>
 
 
-    python train_model.py --data <path_to_data>
-Where:
 
---data: Path to the dataset.
-Hyperparameter Optimization:
-To perform hyperparameter optimization:
+## Requirements and Preparation
 
 
-    python optimize_hyperparameters.py --data <path_to_data> --config <config_file>
-#Where:
+**First of all**, please use `pip install .` to install `xautodl` library.
 
---data: Path to your dataset.
---config: Path to a configuration file specifying hyperparameter optimization parameters.
-###Model Prediction:
-To make predictions with a trained model:
+Please install `Python>=3.6` and `PyTorch>=1.5.0`. (You could use lower versions of Python and PyTorch, but may have bugs).
+Some visualization codes may require `opencv`.
 
-Image-Based Prediction:
+CIFAR and ImageNet should be downloaded and extracted into `$TORCH_HOME`.
+Some methods use knowledge distillation (KD), which require pre-trained models. Please download these models from [Google Drive](https://drive.google.com/open?id=1ANmiYEGX-IQZTfH8w0aSpj-Wypg-0DR-) (or train by yourself) and save into `.latent-data`.
 
-    python predict_helmet_violation.py --image <path_to_image>
-Video-Based Prediction:
+Please use
+```
+git clone --recurse-submodules https://github.com/D-X-Y/AutoDL-Projects.git XAutoDL
+```
+to download this repo with submodules.
 
+## Citation
 
-    python predict_helmet_violation.py --video <path_to_video>
-###Command-Line Arguments:
-  --image: Path to an image file for prediction.
---video: Path to a video file for prediction.
-###Citation
-If you find this project helpful, please cite the related papers:
+If you find that this project helps your research, please consider citing the related paper:
+```
+@inproceedings{dong2021autohas,
+  title     = {{AutoHAS}: Efficient Hyperparameter and Architecture Search},
+  author    = {Dong, Xuanyi and Tan, Mingxing and Yu, Adams Wei and Peng, Daiyi and Gabrys, Bogdan and Le, Quoc V},
+  booktitle = {2nd Workshop on Neural Architecture Search at International Conference on Learning Representations (ICLR)},
+  year      = {2021}
+}
+@article{dong2021nats,
+  title   = {{NATS-Bench}: Benchmarking NAS Algorithms for Architecture Topology and Size},
+  author  = {Dong, Xuanyi and Liu, Lu and Musial, Katarzyna and Gabrys, Bogdan},
+  doi     = {10.1109/TPAMI.2021.3054824},
+  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
+  year    = {2021},
+  note    = {\mbox{doi}:\url{10.1109/TPAMI.2021.3054824}}
+}
+@inproceedings{dong2020nasbench201,
+  title     = {{NAS-Bench-201}: Extending the Scope of Reproducible Neural Architecture Search},
+  author    = {Dong, Xuanyi and Yang, Yi},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  url       = {https://openreview.net/forum?id=HJxyZkBKDr},
+  year      = {2020}
+}
+@inproceedings{dong2019tas,
+  title     = {Network Pruning via Transformable Architecture Search},
+  author    = {Dong, Xuanyi and Yang, Yi},
+  booktitle = {Neural Information Processing Systems (NeurIPS)},
+  pages     = {760--771},
+  year      = {2019}
+}
+@inproceedings{dong2019one,
+  title     = {One-Shot Neural Architecture Search via Self-Evaluated Template Network},
+  author    = {Dong, Xuanyi and Yang, Yi},
+  booktitle = {Proceedings of the IEEE International Conference on Computer Vision (ICCV)},
+  pages     = {3681--3690},
+  year      = {2019}
+}
+@inproceedings{dong2019search,
+  title     = {Searching for A Robust Neural Architecture in Four GPU Hours},
+  author    = {Dong, Xuanyi and Yang, Yi},
+  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages     = {1761--1770},
+  year      = {2019}
+}
+```
 
-b
+# Others
 
-###License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+If you want to contribute to this repo, please see [CONTRIBUTING.md](.github/CONTRIBUTING.md).
+Besides, please follow [CODE-OF-CONDUCT.md](.github/CODE-OF-CONDUCT.md).
 
-##Contribution
-We welcome contributions to the project! To contribute:
+We use [`black`](https://github.com/psf/black) for Python code formatter.
+Please use `black . -l 88`.
 
-Fork the repository.
-Create a new branch for your feature or bug fix.
-Make your changes.
-Submit a pull request describing the changes.
-Please refer to the CONTRIBUTING.md file for guidelines.
+# License
+The entire codebase is under the [MIT license](LICENSE.md).

@@ -99,7 +99,7 @@ Some methods use knowledge distillation (KD), which require pre-trained models. 
 
 Please use
 ```
-git clone --recurse-submodules https://github.com/D-X-Y/AutoDL-Projects.git XAutoDL
+git clone https://github.com/Hackb07/Auto-Deep-Learning
 ```
 to download this repo with submodules.
 
